@@ -4,7 +4,7 @@ if pidof -x ffmpeg > /dev/null; then
     exit 1
 fi
 
-STREAM_KEY=6za6-kdbe-swtu-k6mh-2x34
+STREAM_KEY=<stream key>
 
 ffmpeg \
     -re -ar 44100 -ac 2 -c:a pcm_s16le -f s16le -ac 2 -i /dev/zero \
