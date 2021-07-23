@@ -1,6 +1,10 @@
 LATEST := 2021.3
-#ARM_VER := armv7 # PI2, PI3, PI4 
-ARM_VER := armv6 # ZERO
+
+# PI2, PI3, PI4
+#ARM_VER := armv7 
+
+# ZERO
+ARM_VER := armv6
 
 install:
 	sudo apt-get update
