@@ -25,29 +25,30 @@ cat /etc/modules
 bcm2835-v4l2
 ```
 
-## RTSP
+## RTSP（＝ Real Time Streaming Protocol）
 
+遅延が少ない。
 再生できるプレイヤーが限定される。
 
-- [v4l2rtspserver](https://github.com/mpromonet/v4l2rtspserver) 
+- [v4l2rtspserver](https://github.com/mpromonet/v4l2rtspserver)
   - docker イメージを使えば簡単に始められる。
   - [Makefile](rtsp/Makefile)
 
-## HLS
+## HLS（＝ HTTP Live Streaming）
 
 遅延が大きい。
 
-- nginx で RTMP サーバー、HLS 形式でストリーミング
+- ffmpegでH.264ハードウェアエンコード、nginx で RTMP サーバー、HLS 形式でストリーミング
   - [Makefile](hls/Makefile)
 
-- [v4l2rtspserver](https://github.com/mpromonet/v4l2rtspserver) 
-  - コマンドラインオプションで HLS 配信ができるとあるが、ラズパイ ZERO ではまともに動かなかった。
+- [v4l2rtspserver](https://github.com/mpromonet/v4l2rtspserver)
+  - コマンドラインオプション（-S）をつけて HLS 配信ができるとあるが、ラズパイ ZERO ではまともに動かなかった。
 
-## WebRTC
+## WebRTC（＝ Web Real-Time Communications）
 
 遅延が少ない。
 
-- [WebRTC Native Client Momo](https://github.com/shiguredo/momo) 
+- [WebRTC Native Client Momo](https://github.com/shiguredo/momo)
   - ワンバイナリ
   - とりあえずテストモードで配信
   - [Makefile](webrtc/Makefile)
