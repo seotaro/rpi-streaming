@@ -1,0 +1,15 @@
+[Unit]
+Description=youtube streaming
+RequiresMountsFor=/tmp
+After=nginx.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=10
+User=pi
+Group=pi
+ExecStart=/bin/bash /home/pi/rpi-streaming/youtube/start.sh
+
+[Install]
+WantedBy=multi-user.target
