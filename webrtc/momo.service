@@ -1,0 +1,14 @@
+[Unit]
+Description=webrtc streaming
+After=network.target
+
+[Service]
+WorkingDirectory=/home/pi/rpi-streaming/webrtc/momo
+ExecStart=/home/pi/rpi-streaming/webrtc/momo/momo --resolution=HD --force-i420 --hw-mjpeg-decoder=true --no-audio-device test
+Type=simple
+User=root
+Group=video
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
