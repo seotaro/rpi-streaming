@@ -1,0 +1,16 @@
+[Unit]
+Description=HLS streaming
+RequiresMountsFor=/tmp
+After=nginx.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=10
+User=pi
+Group=pi
+WorkingDirectory=/home/pi/rpi-streaming/hls
+ExecStart=/bin/bash /home/pi/rpi-streaming/hls/start-hls-streaming.sh
+
+[Install]
+WantedBy=multi-user.target
