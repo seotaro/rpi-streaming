@@ -32,14 +32,14 @@ bcm2835-v4l2
 
 - [v4l2rtspserver](https://github.com/mpromonet/v4l2rtspserver)
   - docker イメージを使えば簡単に始められる。
-  - [Makefile](rtsp/Makefile)
+  - [サンプル](rtsp)
 
 ## HLS（＝ HTTP Live Streaming）
 
 遅延が大きい。
 
 - ffmpegでH.264ハードウェアエンコード、nginx で RTMP サーバー、HLS 形式でストリーミング
-  - [Makefile](hls/Makefile)
+  - [サンプル](hls)
 
 - [v4l2rtspserver](https://github.com/mpromonet/v4l2rtspserver)
   - コマンドラインオプション（-S）をつけて HLS 配信ができるとあるが、ラズパイ ZERO ではまともに動かなかった。
@@ -50,5 +50,11 @@ bcm2835-v4l2
 
 - [WebRTC Native Client Momo](https://github.com/shiguredo/momo)
   - ワンバイナリ
-  - とりあえずテストモードで配信
-  - [Makefile](webrtc/Makefile)
+  - [サンブル](webrtc) とりあえずテストモードで配信
+
+## ラズパイから YouTube ライブ配信
+
+- ffmpeg で YouTube ライブ配信のストリーム URL に対して配信する。
+  - 戻って再生も簡単にできる。
+  - アーカイブもされる。
+  - [サンブル](youtube)
